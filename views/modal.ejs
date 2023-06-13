@@ -1,0 +1,74 @@
+<div
+  class="modal"
+  tabindex="-1"
+  id="addProductModal"
+  aria-labelledby="addProductModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Product</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="modal-body">
+        <form
+          method="POST"
+          action="/api/addproduct"
+          enctype="multipart/form-data"
+          class="d-flex flex-column gap-2"
+        >
+          <div>
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name",
+              name="name"
+              minlength="3"
+              required
+            />
+          </div>
+          <div>
+            <label class="form-label" for="desc">Description</label>
+            <textarea
+              class="form-control"
+              id="desc",
+              name="desc"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+          <div>
+            <label class="form-label" for="image">Upload Image</label>
+            <input type="file" class="form-control" name="product" id="image" required />
+          </div>
+          <div>
+            <label class="form-label" for="price">Price</label>
+            <input type="number" class="form-control" name="price" id="price" required />
+          </div>
+          <div>
+            <label for="form-label" for="category">Categories</label>
+            <input type="text" name="category" class="form-control"  id="category" required />
+          </div>
+          <div class="mt-4">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
