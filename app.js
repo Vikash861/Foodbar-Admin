@@ -48,7 +48,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // middleware
-app.use(cors({ origin: 'http://localhost:3000' }))
+app.use(cors({ origin: 'https://foodbar-app.netlify.app' }))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 
